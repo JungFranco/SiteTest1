@@ -1,0 +1,374 @@
+
+body{
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: #112033;
+    width: 100%;
+    max-width: 100%;
+}
+input, textarea, button{
+    outline: 0 !important;
+}
+.ForText{
+    font-family: 'Verdana';
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: #112033;
+    // width: 100%;
+    padding: .2rem 0;
+    display: grid;
+    grid-template-columns: 20.01329% 48.40425%;
+    grid-column-gap: 31.462%;
+    margin-left: 10.8333%;
+    margin-right: 10.8333%;
+    .Logo{
+        .LinkLogo{
+            width: 100%;
+            .LogoImg{
+                width: 100%;
+            }
+        }
+    }
+    .Menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 6.5%;
+        .MenuItem{
+            color: #989595;
+            font-size: 1.25rem;
+            .ForText;
+            transition: 300ms;
+            &:hover{
+                color: #00A6FA;
+            }
+        }
+    }
+}
+main{
+    display: flex;
+    justify-content: center;
+    .FAQBlock{
+        width: 52.08%;
+        margin-top: 3rem;
+        
+        .TitleFAQ{
+            border: 3px solid #00A6FA;
+            border-radius: 15px;
+            width: 100%;
+            height: 40vh;
+            .FAQText{
+                display: flex;
+                justify-content: center;
+                color: #00A6FA;
+                font-family: 'Verdana';
+                margin-top: 7vh;
+                font-weight: bold;
+                font-size: 4.5rem;
+            }
+            .QuestTitle{
+                display: flex;
+                justify-content: center;
+                color: #fff;
+                font-family: "Verdana";
+                font-weight: bold;
+                font-size: 2.25rem;
+                margin-top: 3vh;
+            }
+        }
+        .QuestionsBlock{
+            margin-top: 5rem;
+        }
+        .AccordionItem{
+            width: 96%;
+            position: relative;
+            border: 3px solid #00A6FA;
+            padding: .75rem 1rem;
+            border-radius: 10px;
+            margin-top: 2.25rem;
+        }
+        .AccordionItemTitle{
+            padding: 10px;
+            background-color: #112033;
+            color: #ffff;
+            cursor: pointer;
+            position: relative;
+            font-size: 18px;
+            font-family: 'Verdana';
+            font-weight: bold;
+        }
+        .AccordionItemTitle::before{
+            content: '+';
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 20px;
+            font-size: 30px;
+        }
+        .AccordionItemContent{
+            position: relative;
+            background-color: #112033;
+            color: rgb(218, 218, 218);
+            padding: 0 1rem;
+            height: 0;
+            font-size: 22px;
+            font-family: 'Verdana';
+            font-weight: bold;
+            overflow: hidden;
+            transition: 500ms ease-in-out;
+        }
+        .AccordionItem.active .AccordionItemContent{
+            height: 150px;
+        }
+        .AccordionItem.active .AccordionItemTitle::before{
+            content: '-';
+            font-size: 30px;
+        }
+    }
+    
+}
+@media screen and ( min-width: 2559px ){
+    header{
+        grid-template-columns: 20.01329% 35.40425%;
+        grid-column-gap: 45.462%;
+    }
+    main{
+        .FAQBlock{
+            .AccordionItem{
+                width: 97%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1605px){
+    main{
+        .FAQBlock{
+            width: 60%;
+        }
+    }
+}
+@media screen and (max-width: 1400px){
+    main{
+        .FAQBlock{
+            width: 65%;
+        }
+    }
+}
+@media screen and (max-width: 1285px){
+    main{
+        .FAQBlock{
+            width: 70%;
+        }
+    }
+}
+@media screen and (max-width: 1205px){
+    header{
+        .Menu{
+            .MenuItem{
+                font-size: 1.2rem;
+            }
+        }
+    }
+    main{
+        .FAQBlock{
+            width: 75%;
+            .TitleFAQ{
+                .FAQText{
+                    font-size: 4rem;
+                }
+                .QuestTitle{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1025px){
+    header{
+        .Menu{
+            .MenuItem{
+                font-size: 1rem;
+            }
+        }
+    }
+    main{
+        .FAQBlock{
+            width: 75%;
+            .TitleFAQ{
+                .FAQText{
+                    font-size: 3.75rem;
+                }
+                .QuestTitle{
+                    font-size: 1.75rem;
+                }
+            }
+            .QuestionsBlock{
+                .AccordionWrapper{
+                    .AccordionItem{
+                        .AccordionItemTitle{
+                            font-size: .85rem;
+                        }
+                        .AccordionItemContent{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 855px){
+    header{
+        .Menu{
+            .MenuItem{
+                font-size: .75rem;
+            }
+        }
+    }
+    main{
+        .FAQBlock{
+            width: 75%;
+            .TitleFAQ{
+                .FAQText{
+                    font-size: 3.5rem;
+                    margin-top: 5vh;
+                }
+                .QuestTitle{
+                    font-size: 1.5rem;
+                }
+            }
+            .AccordionItemTitle::before {
+                right: 5px;
+            }
+            .AccordionItem.active .AccordionItemContent{
+                height: 110px;
+            }
+            .QuestionsBlock{
+                .AccordionWrapper{
+                    .AccordionItem{
+                        .AccordionItemTitle{
+                            font-size: .75rem;
+                        }
+                        .AccordionItemContent{
+                            font-size: .85rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px){
+    main{
+        .FAQBlock{
+            width: 80%;
+            margin-top: 2rem;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    main{
+        .FAQBlock{
+            width: 85%;
+            .AccordionItem{
+                margin-top: 1.25rem;
+            }
+            .QuestionsBlock {
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 705px){
+    header{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    main{
+        .FAQBlock{
+            width: 90%;
+            margin-top: 1rem;
+        }
+    }
+}
+@media screen and (max-width: 481px){
+    header{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        grid-template-columns: 20.01329% 63.40425%;
+        grid-column-gap: 16.462%;
+    }
+    main{
+        .FAQBlock{
+            width: 90%;
+            margin-top: 1rem;
+            .TitleFAQ{
+                .FAQText{
+                    font-size: 2.5rem;
+                    margin-top: 8vh;
+                }
+                .QuestTitle{
+                    font-size: 1rem;
+                }
+            }
+            .AccordionItem{
+                padding: .25rem .5rem;
+            }
+        }
+        
+    }
+}
+@media screen and ( max-width: 426px ){
+    main{
+        .FAQBlock{
+            .TitleFAQ{
+                height: 60vh;    
+            }
+        }
+        
+    }
+}
+@media screen and ( max-width: 376px){
+    header{
+        grid-template-columns: 20.01329% 70.40425%;
+        grid-column-gap: 10.462%;
+        .Menu{
+            .MenuItem{
+                font-size: .65rem;
+            }
+        }
+    }
+    main{
+        .FAQBlock{
+            .QuestionsBlock{
+                .AccordionWrapper{
+                    .AccordionItem{
+                        .AccordionItemTitle{
+                            font-size: .65rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and( max-width: 321px){
+    header{
+        grid-template-columns: 20.01329% 75.40425%;
+        grid-column-gap: 5.462%;
+    }
+}
+@media screen and ( min-height: 380px){
+    main{
+        .FAQBlock{
+            .TitleFAQ{
+                height: 40vh;
+            }
+        }
+    }
+}
